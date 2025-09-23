@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sales Map</title></head>
+<body style="margin:0; text-align:center; padding-top: 10px;">
+
+    <p><b>Click a region to view a report.</b></p>
+    
+    <!-- Ảnh bản đồ -->
+    <img src="images/Map.jpg" usemap="#salesmap" border="0" alt="Sales Map">
+
+    <!-- Định nghĩa các vùng trên bản đồ -->
+    <map name="salesmap">
+        <!-- Vùng Tây (Đỏ) -->
+        <area shape="poly" 
+              coords="8,19,83,16,84,43,77,93,22,106,7,99,7,19" 
+              href="west.html" 
+              target="content_frame" 
+              alt="West Region">
+              
+        <!-- Vùng Trung Tây (Hồng) -->
+        <area shape="poly" 
+              coords="87,17,126,17,128,49,121,73,85,92,79,93,86,43" 
+              href="midwest.html" 
+              target="content_frame" 
+              alt="Midwest Region">
+
+        <!-- Vùng Đông Bắc (Xanh lá) -->
+        <area shape="poly" 
+              coords="130,17,185,25,180,42,175,69,124,72,130,49" 
+              href="northeast.html" 
+              target="content_frame" 
+              alt="Northeast Region">
+              
+        <!-- Vùng Nam (Xanh dương) -->
+        <area shape="poly" 
+              coords="87,95,123,75,174,72,179,109,141,126,89,123" 
+              href="south.html" 
+              target="content_frame" 
+              alt="South Region">
+    </map>
+
+</body>
+</html>
