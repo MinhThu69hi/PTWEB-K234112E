@@ -1,0 +1,154 @@
+<html>
+<head>
+    <title>Ex49 - Minh Thư</title>
+</head>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #ffffff;
+        }
+        .form-container {
+            width: 620px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #e0ffff;
+            border: 2px solid #0000cd;
+        }
+        .title {
+            color: red;
+            text-align: left; 
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px; 
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid black;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .section p {
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .options-table {
+            margin-left: 20px;
+            border-spacing: 0 5px;
+            border-collapse: separate;
+        }
+        .options-table td {
+            padding-right: 30px;
+        }
+        .date-inputs input[type="text"] {
+            border: 1px solid #7f9db9;
+        }
+        .keywords-input {
+            width: 95%;
+            margin-left: 20px;
+            border: 1px solid #7f9db9;
+            padding: 2px;
+        }
+        .button-group {
+            padding-top: 10px;
+        }
+        .image-button {
+            display: inline-block;
+            margin: 0 25px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            vertical-align: top;
+        }
+        .image-button img {
+            border: none;
+            margin-bottom: 3px;
+        }
+        .text-search { color: #008000; font-weight: bold; }
+        .text-help { color: #0000ff; font-weight: bold; }
+        .text-cancel { color: #ff0000; font-weight: bold; }
+        button[type="reset"] {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="title">Online Classifieds Search Form</div>
+  
+        <hr>
+
+        <form name="searchForm">
+          
+            <div class="section">
+                <p>1) Search for a classified in the following sections:</p>
+                <table class="options-table">
+                    <tr>
+                        <td><input type="radio" name="section" value="employment"> Employment</td>
+                        <td><input type="radio" name="section" value="personal"> Personal</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="section" value="forsale" checked> For Sale</td>
+                        <td><input type="radio" name="section" value="misc"> Miscellaneous</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="section" value="housing"> Housing</td>
+                        <td><input type="radio" name="section" value="all"> All of the above</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <p>2) Search the following publications:</p>
+                <table class="options-table">
+                    <tr>
+                        <td><input type="checkbox" name="pub_midwest" checked> Midwest times</td>
+                        <td><input type="checkbox" name="pub_modern"> Modern News</td>
+                        <td><input type="checkbox" name="pub_employment"> Employment Today</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="pub_greatlakes" checked> Great Lakes Classifieds</td>
+                        <td><input type="checkbox" name="pub_middleton"> Middleton Daily</td>
+                        <td><input type="checkbox" name="pub_cashtown"> Cashtown Daily News</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <p class="date-inputs">3) From to <input type="text" name="fromDate" size="12" value="mm/ydd/yy"> to <input type="text" name="toDate" size="12" value="mm/dd/yy"></p>
+            </div>
+
+            <div class="section">
+                <p>4) Enter a few keywords to describe the classified.</p>
+                <input type="text" name="keywords" class="keywords-input">
+            </div>
+
+            <div class="section">
+                <p>5) Click one of the options below:</p>
+                <div class="button-group">
+                    <a href="#" onclick="alert('Search simulation'); return false;" class="image-button">
+                        <img src="images/Search.gif" alt="Search icon">
+                        <br><span class="text-search">Search</span>
+                    </a>
+                    <a href="#" onclick="alert('This would display a help page.'); return false;" class="image-button">
+                        <img src="images/Help.gif" alt="Help icon">
+                        <br><span class="text-help">Help</span>
+                    </a>
+                    <button type="reset" class="image-button">
+                        <img src="images/Cancel.gif" alt="Cancel icon">
+                        <br><span class="text-cancel">Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
