@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>Ex51 - Minh Thư</title>
+</head>
+    <style>
+        body {
+            background-color: #008080; 
+            color: white; 
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .container {
+            width: 650px;
+            margin: 20px auto; 
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header img {
+            max-width: 100%;
+        }
+        
+        .header hr {
+            border: none;
+            height: 2px;
+            background-color: #FFCC66;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .header h2 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #FFCC66;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 5px 0;
+        }
+
+        .header p {
+            color: #FF9933;
+            font-style: italic;
+            margin-top: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+  
+        .registration-form {
+            padding-left: 20px; 
+        }
+        
+        .form-row {
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 12px; 
+        }
+        
+        .form-row label, .form-row .label-text {
+            margin-right: 8px; 
+        }
+
+        .last-name-label {
+            margin-left: 15px;
+        }
+        
+        .physician-row {
+            align-items: flex-start; 
+        }
+        .physician-row label {
+             padding-top: 3px;
+        }
+
+        input[type="text"] {
+            padding: 4px;
+        }
+        
+        .name-input {
+            width: 150px;
+        }
+
+        select[multiple] {
+            width: 200px;
+            height: 80px;
+            background-color: white;
+            border: 1px solid #7f9db9;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container input {
+            padding: 5px 15px;
+            margin: 0 10px;
+            background-color: #E0E0E0;
+            border: 2px outset #F0F0F0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="images/Logo.gif" alt="St. Mary's of Northland Pines Logo">
+        </div>
+
+        <h1>Newborn Registration</h1>
+
+        <form class="registration-form" action="#" method="post">
+            <div class="form-row">
+                <label for="date">Date: mm/dd/yy</label>
+                <input type="text" id="date" name="date" style="width: 100px;">
+            </div>
+            <div class="form-row">
+                <label for="infant_first">1) Infant's first name:</label>
+                <input type="text" id="infant_first" name="infant_first" class="name-input">
+                <span class="label-text last-name-label">Last:</span>
+                <input type="text" id="infant_last" name="infant_last" class="name-input">
+            </div>
+             <div class="form-row">
+                <label for="medical_record">2) Medical Record #:</label>
+                <input type="text" id="medical_record" name="medical_record" style="width: 120px;">
+            </div>
+            <div class="form-row">
+                <label for="dob">3) Date of birth: mm/dd/yy</label>
+                <input type="text" id="dob" name="dob" style="width: 100px;">
+            </div>
+            <div class="form-row">
+                <label for="birth_weight">4) Birth weight:</label>
+                <input type="text" id="birth_weight" name="birth_weight" style="width: 80px;">
+            </div>
+            <div class="form-row">
+                <label for="apgar">5) APGAR score:</label>
+                <input type="text" id="apgar" name="apgar" style="width: 60px;">
+            </div>
+            <div class="form-row">
+                <label for="mother_first">6) Mother's first name:</label>
+                <input type="text" id="mother_first" name="mother_first" class="name-input">
+                <span class="label-text last-name-label">Last:</span>
+                <input type="text" id="mother_last" name="mother_last" class="name-input">
+            </div>
+            <div class="form-row">
+                <label for="father_first">7) Father's first name:</label>
+                <input type="text" id="father_first" name="father_first" class="name-input">
+                <span class="label-text last-name-label">Last:</span>
+                <input type="text" id="father_last" name="father_last" class="name-input">
+            </div>
+            <div class="form-row physician-row">
+                <label for="physicians">8) Physician (check all that apply):</label>
+                <select id="physicians" name="physicians" multiple>
+                    <option value="albert">Dr. Warren Albert</option>
+                    <option value="alvarez">Dr. Maria Alvarez</option>
+                    <option value="brinkman">Dr. Karen Brinkman</option>
+                    <option value="kerry">Dr. Michael Kerry</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <input type="submit" value="Register">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
