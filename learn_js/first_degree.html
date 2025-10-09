@@ -1,0 +1,72 @@
+<html>
+   <head>
+       <meta charset='utf-8'>
+       <title>First Degree - Nguyễn Thị Ái Nhi</title>
+       <script>
+        function do_solution()
+        {
+            a=eval(myform.a_coeff.value)
+            b=eval(myform.b_coeff.value)
+            result_td=document.getElementById("result_td")
+            result=""
+            if(a==0 && b==0)
+            {
+                result="INF"
+            }
+            else if(a==0 && b!=0)
+            {
+                result="No solution"
+            }
+            else
+            {
+                x=-b/a
+                result="x= " + x
+            }
+            result_td.innerText=`${result}`
+        }
+        function do_clear()
+        {
+            result_td=document.getElementById("result_td").innerHTML=""
+            myform.a_coeff.focus()
+        } 
+        function do_help()
+        {
+            if(confirm("openhelp"))
+            {
+                window.open("help.html","_blank")
+            }
+        }
+       </script>
+   </head>
+   <body>
+       <form name="myform">
+        <table>
+            <tr>
+                <td>A coeff:</td>
+                <td>
+                    <input type="text" name="a_coeff" id="a_coeff"/>
+                </td>
+            </tr>
+            <tr>
+                <td>B coeff:</td>
+                <td>
+                    <input type="text" name="b_coeff" id="b_coeff"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td id="result_td"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <button type="button" onclick="do_solution()">Solution</button>
+                    <button type="reset" onclick="do_clear()">Clear</button>
+                    |
+                    <button type="button" onclick="do_help()">Help</button>
+                </td>
+            </tr>
+        </table>
+       </form>
+   </body>
+</html>
