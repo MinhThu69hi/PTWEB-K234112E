@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 53: Product-GET</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 800px;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin: -20px -20px 20px -20px; 
+            font-weight: normal;
+        }
+        form table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            font-weight: bold;
+        }
+        input[type="number"], input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="number"] {
+            width: 60px;
+        }
+        .total-section {
+            text-align: right;
+        }
+        #total_cost {
+            width: 100px;
+            font-weight: bold;
+        }
+        .submit-btn {
+            background-color: #f0c14b; 
+            border: 1px solid #a88734;
+            padding: 8px 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #eab53a;
+        }
+        td:nth-child(5) {
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Exercise 53: Product-GET</h2>
+
+        <form action="receipt.html" method="get">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Part Number</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Item table</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="product-row">
+                        <td>C112</td>
+                        <td>Mouse</td>
+                        <td class="price">19.95$</td>
+                        <td>
+                            <input type="number" name="qty_c112" class="quantity" data-price="19.95" min="0">
+                        </td>
+                        <td>
+                            <input type="text" class="item-total" readonly>
+                        </td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>B124</td>
+                        <td>Keyboard US</td>
+                        <td class="price">29.95$</td>
+                        <td>
+                            <input type="number" name="qty_b124" class="quantity" data-price="29.95" min="0">
+                        </td>
+                        <td>
+                             <input type="text" class="item-total" readonly>
+                        </td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>U125</td>
+                        <td>USB KingMax</td>
+                        <td class="price">39.95$</td>
+                        <td>
+                            <input type="number" name="qty_u125" class="quantity" data-price="39.95" min="0">
+                        </td>
+                        <td>
+                             <input type="text" class="item-total" readonly>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="total-section">
+                <span>Total:</span>
+                <input type="text" id="total_cost" name="total" readonly>
+                <button type="submit" class="submit-btn">Sum</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const quantityInputs = document.querySelectorAll('.quantity');
+        
+        function calculateTotal() {
+            let grandTotal = 0;
+            const productRows = document.querySelectorAll('.product-row');
+
+            productRows.forEach(row => {
+                const quantityInput = row.querySelector('.quantity');
+                const price = parseFloat(quantityInput.dataset.price);
+                const quantity = parseInt(quantityInput.value) || 0; 
+
+                const itemTotal = price * quantity;
+                
+                const itemTotalInput = row.querySelector('.item-total');
+                if(itemTotal > 0) {
+                    itemTotalInput.value = itemTotal.toFixed(2) + '$';
+                } else {
+                    itemTotalInput.value = '';
+                }
+                
+                grandTotal += itemTotal;
+            });
+
+            const totalCostInput = document.getElementById('total_cost');
+            totalCostInput.value = grandTotal.toFixed(2) + '$';
+        }
+
+        quantityInputs.forEach(input => {
+            input.addEventListener('input', calculateTotal);
+        });
+
+        calculateTotal();
+    </script>
+
+</body>
+</html>

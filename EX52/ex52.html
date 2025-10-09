@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Ex52 - Minh Thư</title>
+</head>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .contact-form-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #8b3a62; 
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #7a3155;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-form-container">
+        <h2>Contact the editorial office</h2>
+
+        <form action="handle_form.html" method="get">
+            <div class="form-group">
+                <label for="fullname">Full name</label>
+                <input type="text" id="fullname" name="fullname">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+             <div class="form-group">
+                <label for="sendto">Send to</label>
+                <select id="sendto" name="sendto">
+                    <option value="editorial_board">Editorial board</option>
+                    <option value="news_department">News Department</option>
+                    <option value="board_of_perspectives">Board of Perspectives</option>
+                    <option value="world_board">World Board</option>
+                    <option value="business_department">Business Department</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title">
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea id="content" name="content"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>
