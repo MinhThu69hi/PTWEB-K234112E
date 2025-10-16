@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Ex54 - Minh Thư</title>
+</head>
+<body>
+    <form name="my_form">
+        <table>
+            <tbody>
+                <tr>
+                    <td>a:</td>
+                    <td><input type="text" id="numA" name="numA" value="30"></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="text" id="numB" name="numB" value="45"></td>
+                </tr>
+                <tr>
+                    <td>c:</td>
+                    <td><input type="text" id="numC" name="numC" value="90"></td>
+                </tr>
+                <tr>
+                    <td>Result:</td>
+                    <td><input type="text" id="result" name="result" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button-container">
+                        <button type="button" onclick="calc_max()">MAX</button>
+                        <button type="button" onclick="calc_min()">MIN</button>
+                        <button type="button" onclick="calc_sin()">sin(a)</button>
+                        <button type="button" onclick="calc_cos()">Cos(a)</button>
+                        <button type="button" onclick="calc_pow()">a^b</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script src="script.js"></script>
+
+</body>
+</html>

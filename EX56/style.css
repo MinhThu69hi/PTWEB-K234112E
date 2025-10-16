@@ -1,0 +1,66 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 20px; 
+}
+
+.string-processor {
+    width: 750px;      
+    margin: 0 auto;    
+    border: 1px solid #a0a0a0; 
+    padding: 20px;
+    background-color: #f0f0f0; 
+}
+
+.string-processor h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.io-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.io-table td {
+    width: 50%;
+    padding: 2px 5px;
+    vertical-align: top;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box; 
+    border: 1px inset #7f9db9; 
+    resize: vertical;
+    font-family: monospace;
+}
+
+.controls-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.controls-table td {
+    border: 1px solid #c0c0c0; 
+    padding: 0; 
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    font-size: 0.9em;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px outset #fff; 
+    text-align: center;
+}
+
+button:active {
+    border-style: inset; 
+}
