@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+table {
+    border-collapse: collapse; 
+    width: 450px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #eaf2e3;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+td:first-child {
+    font-weight: bold;
+    width: 35%;
+}
